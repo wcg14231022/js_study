@@ -1,0 +1,29 @@
+<html>
+
+<head>
+    <title>Displaying keypresses</title>
+    <script lang="javascript" type="text/javascript">
+        function Displaykey(e) {
+            var keyCode;
+            if (e.keyCode) {
+                keyCode = e.keyCode;
+            }
+            else {
+                keyCode = e.which;
+            }
+            character = String.fromCharCode(keyCode);
+            k = document.getElementById("keys");
+            k.innerHTML += "按下了" + character + "键.</br>";
+        }
+    </script>
+</head>
+
+<body onkeyPress="Displaykey(event)">
+    <h1>Displaying Typed Character</h1>
+    <p>This ducument includes a simple script that displays the keys you type in the paragraph below. Type a few keys
+        and try it!
+    </p>
+    <p id="keys"></p>
+</body>
+
+</html>
