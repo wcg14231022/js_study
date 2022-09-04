@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <title>timeout example</title>
+        <script lang="javascript" type="text/javascript">
+            var counter = 0;
+            ID = window.setTimeout("update();", 2000);
+            function update(){
+                counter++;
+                document.form1.input1.value = "The counter is now at " + counter;
+                ID = window.setTimeout("update()", 2000);
+            }
+        </script>
+    </head>
+    <body>
+        <h1>timeout example</h1>
+        <hr>
+        <p>The text value below is being updated every 2 seconds.</p>
+        <p>Press the reset button to restart the count, or the stop button to stop it.</p>
+        <hr>
+        <form name="form1">
+            <input type="text" name="input1" size="40">
+            <br>
+            <input type="button" value="reset" onclick="counter = 0;">
+            <br>
+            <input type="button" value="stop" onclick="window.clearTimeout(ID);">
+        </form>
+        <hr>
+    </body>
+</html>

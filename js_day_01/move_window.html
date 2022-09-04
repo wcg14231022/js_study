@@ -1,0 +1,43 @@
+<html>
+
+<head>
+    <title>move window test</title>
+    <script lang="javascript" type="text/javascript">
+        var count = 0;  //计数器，窗口调整次数
+        function DoIt() {
+            if (!new_window){
+                var new_window = window.open('', 'new_window', 'toolbar = no, status = no, width = 200, height = 100');
+            }
+            if (document.form1.w.value && document.form1.h.value) {
+                // self.resizeTo(document.form1.w.value, document.form1.h.value);
+                new_window.resizeTo(document.form1.w.value, document.form1.h.value);
+            }
+            if (document.form1.x.value && document.form1.y.value) {
+                // self.moveTo(document.form1.x.value, document.form1.y.value);
+                new_window.moveTo(document.form1.x.value, document.form1.y.value);
+            }
+            d = document.getElementById("paragraph");
+            var width = document.form1.w.value;
+            var height = document.form1.h.value;
+            var X_position = document.form1.x.value;
+            var Y_position = document.form1.y.value;
+            d.innerHTML += "第" + (++count) + "次窗口调整，窗口宽度为" + width + ",窗口高度为" + height + "<br>";
+            // count++;
+        }
+    </script>
+</head>
+
+<body>
+    <h1>Moving and Resizing Windows</h1>
+    <form name="form1">
+        <b>width:</b><input type="text" name="w"><br>
+        <b>height:</b><input type="text" name="h"><br>
+        <b>X-position:</b><input type="text" name="x"><br>
+        <b>Y-position:</b><input type="text" name="y"><br>
+        <input type="button" value="Change Window" onclick="DoIt()">
+    </form>
+    <br>
+    <p id="paragraph"></p>
+</body>
+
+</html>
