@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <title>Sound Test</title>
+        <script lang="javascript" type="text/javascript">
+            function PlaySound(){
+                var sound = document.getElementById("note_c1");
+                try{
+                    sound.play();
+                }catch (e){
+                    alert(e);
+                    alert("No sound support.");
+                    try{
+                        // sound.Play();
+                    }catch(e){
+                        alert("No sound support.");
+                    }
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <h1>Sound Test</h1>
+        <!-- <embed id="note_c1" src="music_src/music_01.mp3" width="100" height="100" autostart="true" enablejavascript="true"/> -->
+        <audio id="note_c1">
+            <source src="music_src/music_01.mp3" type="audio/mpeg">
+        </audio>
+        <input type="button" value="Play the sound" onclick="PlaySound()">
+    </body>
+</html>
