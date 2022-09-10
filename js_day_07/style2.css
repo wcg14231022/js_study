@@ -1,0 +1,36 @@
+body {
+    font-family: Times, "Times New Ronman", sans-serif;
+    font-size: 14pt;
+}
+
+P {
+    margin-left: 20%;
+    margin-right: 20%;
+    text-align: left;
+    text-indent: 0%;
+}
+
+B {
+    color: black;
+    background-color: aqua;
+}
+
+I {
+    color: red;
+}
+
+H1 {
+    font-size: 200%;
+    text-align: right;
+    text-transform: uppercase;
+}
+
+UL {
+    margin-left: 30%;
+    margin-right: 30%;
+    background-color: yellow;
+}
+
+LI {
+    margin-top: 20px;
+}

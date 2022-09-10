@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <title>style sheet example</title>
+        <link rel="stylesheet" type="text/css" href="style1.css">
+        <link rel="stylesheet" type="text/css" href="style2.css" disable>
+        <script lang="javascript" type="text/javascript" src="styleswitch.js"></script>
+    </head>
+    <body>
+        <h1>multiple-choice styles</h1>
+        <p>
+            This is a standard paragraph of text. Its font, margins, colors, justification, and other attributes depend on the style
+            sheet you select. This paragraph includes some text in <b>bold</b> and <i>italics</i>.
+        </p>
+        <p>You can select one of the styles for this document:</p>
+        <ul>
+            <li><a href="#" onclick="Style(0, true);">style sheet # 1</a></li>
+            <li><a href="#" onclick="Style(1, true);">style sheet # 2</a></li>
+            <li><a href="#" onclick="Style(0, false);">No style sheet</a></li>
+        </ul>
+        <p>These links call a short javascript function that enables one of this document's two linked external style sheets.
+            You can edit the style sheets to style this document in two different ways, witnout changing any HTML.
+        </p>
+    </body>
+</html>

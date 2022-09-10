@@ -1,0 +1,45 @@
+<html>
+    <head>
+        <title>Dynamic Order Form</title>
+        <script lang="javascript" type="text/javascript" src="dform.js"></script>
+    </head>
+    <body>
+        <h1>Order Form</h1>
+        <hr>
+        <form name="form1">
+            <b>Bill to:</b><br>
+            <b>Name:</b><input type="text" name="customer" size="20"><br>
+            <b>Address 1:</b><input type="text" name="addr1" size="20"><br>
+            <b>Address 2:</b><input type="text" name="addr2" size="20"><br>
+            <b>City:</b><input type="text" name="city" size="15">
+            <b>State:</b><input type="text" name="state" size="4">
+            <b>Zip:</b><input type="text" name="zip" size="9">
+            <hr>
+            <b>Ship to:</b><br>
+            <input type="radio" name="shipopt" value="same" checked onClick="Show(0);">
+            <b>Same Address</b>
+            <input type="radio" name="shipopt" value="other" onClick="Show(1);">
+            <b>Other Address</b>
+            <div id="shipto" style="display: none">
+                <br>
+                <b>Name:</b><input type="text" name="shipname" size="20"><br>
+                <b>Address 1:</b><input type="text" name="shipaddress1" size="20"><br>
+                <b>Address 2:</b><input type="text" name="shipaddress2" size="20"><br>
+                <b>City:</b><input type="text" name="shipcity" size="15">
+                <b>State:</b><input type="text" name="shipstate" size="4">
+                <b>Zip:</b><input type="text" name="shipzip" size="9">
+            </div>
+            <hr>
+            <div id="items">
+                <b>Qty:</b>
+                <input type="text" name="qty1" size="3">
+                <b>Item:</b>
+                <input type="text" name="item1" size="45">
+                <br>
+                <input type="button" value="Add an Item" onclick="AddItem();" id="add">
+            </div>
+            <hr>
+            <input type="submit" value="Continue...">
+        </form>
+    </body>
+</html>

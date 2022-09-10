@@ -1,0 +1,33 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12pt;
+}
+p {
+    margin-left: 10%;
+    margin-right: 10%;
+    text-align: justify;
+    text-indent: 3%;
+}
+
+B {
+    color: red;
+}
+
+I {
+    color: darkviolet;
+}
+
+H1 {
+    font-size: 300%;
+    text-align: center;
+    text-transform: capitalize;
+}
+
+UL {
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+LI {
+    margin-top: 10px;
+}
